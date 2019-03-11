@@ -1,4 +1,4 @@
-package com.yumong.live.gateway;
+package com.yumong.cloud.gateway;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,4 +1,4 @@
-package com.yumong.live.gateway;
+package com.yumong.cloud.gateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
