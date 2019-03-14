@@ -1,11 +1,11 @@
 package com.yumong.cloud.security.service;
 
-import com.yumong.cloud.models.Role;
-import com.yumong.cloud.models.User;
-import com.yumong.cloud.models.enums.Status;
-import com.yumong.cloud.models.enums.UserStatus;
+import com.yumong.cloud.security.models.Role;
+import com.yumong.cloud.security.models.User;
+import com.yumong.cloud.security.models.enums.Status;
+import com.yumong.cloud.security.models.enums.UserStatus;
 import com.yumong.cloud.security.dao.UserDao;
-import com.yumong.cloud.support.I18nUtil;
+import com.yumong.cloud.support.utils.I18nUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -13,12 +13,11 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.HashSet;
 import java.util.Set;
 
-import static com.yumong.cloud.support.ErrorUtil.raise;
+import static com.yumong.cloud.support.utils.ErrorUtil.raise;
 
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
@@ -28,7 +27,6 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     private I18nUtil i18nUtil;
 
     @Override
-    @Transactional(readOnly = true)
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         User user = userRepo.findByUsername(username);
         if (user == null) {

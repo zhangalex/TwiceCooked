@@ -15,6 +15,7 @@
         <!--Plugin versions-->
         <maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
         <spring-boot-maven-plugin-version>2.0.1.RELEASE</spring-boot-maven-plugin-version>
+        <spring-boot-admin-server.version>2.0.5</spring-boot-admin-server.version>
     </properties>
 
     <parent>
@@ -73,9 +74,10 @@
         <module>discovery</module>
         <module>gateway</module>
         <module>security</module>
-        <module>authorize</module>
         <module>models</module>
         <module>support</module>
+        <module>commons</module>
+        <module>spring-boot-admin</module>
     </modules>
 
 </project>

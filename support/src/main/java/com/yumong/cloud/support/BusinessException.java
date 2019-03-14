@@ -1,5 +1,8 @@
 package com.yumong.cloud.support;
 
+import com.yumong.cloud.support.utils.I18nUtil;
+import com.yumong.cloud.support.utils.SpringUtil;
+
 public class BusinessException extends RuntimeException {
     private Integer code = 400;
 
