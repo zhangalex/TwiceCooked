@@ -74,10 +74,10 @@
         <module>discovery</module>
         <module>gateway</module>
         <module>security</module>
-        <module>models</module>
         <module>support</module>
         <module>commons</module>
-        <module>spring-boot-admin</module>
+        <module>admin</module>
+        <module>redis</module>
     </modules>
 
 </project>
